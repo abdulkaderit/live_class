@@ -1,8 +1,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-import 'HomeActivety.dart';
+import 'LoginForm.dart';
 
 class MyApp extends StatelessWidget{
   const MyApp({super.key});
@@ -24,7 +23,7 @@ class MyApp extends StatelessWidget{
               ))
       ),
       debugShowCheckedModeBanner: false,
-      home: HomeActivety(),
+      home: Loginform(),
     );
   }
 }
