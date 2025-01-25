@@ -135,7 +135,7 @@ class WrapExample extends StatelessWidget{
          Expanded(
            child: Padding(
              padding: const EdgeInsets.all(8.0),
-             child: GridView.count( 
+             child: GridView.count(
                  crossAxisCount: 3,
                  crossAxisSpacing:10,
                mainAxisSpacing: 20,
@@ -150,5 +150,30 @@ class WrapExample extends StatelessWidget{
      ),
    );
   }
+}
 
+class LayoutClass extends StatelessWidget{
+  const LayoutClass({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Layout Builder"),
+      ),
+      body: LayoutBuilder(
+        builder: (context,con){
+          if(con.maxWidth>600){
+            return Center(
+              child:Text("This is tablet layout") ,
+            );
+          }else {
+            return Center(
+              child: Text("This is Mobile Layout"),
+            );
+          }
+        },
+      ),
+    );
+  }
 }
