@@ -132,11 +132,19 @@ class WrapExample extends StatelessWidget{
                // ),
            ),
          ),
-         GridView.count(
-             crossAxisCount: 3,
-             crossAxisSpacing:10,
-           mainAxisSpacing: 20,
-           children:List.generate(10, (index)=> Chip(label: Text("Item ${index}"),backgroundColor: Colors.blueAccent,)),
+         Expanded(
+           child: Padding(
+             padding: const EdgeInsets.all(8.0),
+             child: GridView.count( 
+                 crossAxisCount: 3,
+                 crossAxisSpacing:10,
+               mainAxisSpacing: 20,
+               children:List.generate(10, (index)=>
+                 Container(
+                   decoration: BoxDecoration(color: Colors.blue,borderRadius: BorderRadius.circular(15)),)
+                 //Chip(label: Text("Item ${index}"),backgroundColor: Colors.blueAccent,)
+               ),),
+           ),
          )
        ],
      ),
